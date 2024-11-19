@@ -1,0 +1,130 @@
+.modale-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.modale-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.modale-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Background noir transparent */
+.modale-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Transparent noir */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Assurez-vous qu'elle est au-dessus du reste */
+}
+
+/* Contenu de la modale */
+.modale-content {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1100;
+}
+
+/* Image de la modale */
+.modale-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.modale-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Bouton fermer */
+.modale-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(148, 179, 147, 1);
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 1200;
+}
+
+.modale-close:hover {
+  background-color: rgba(17, 56, 12, 1);
+}
+
+/* Navigation */
+.modale-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.modale-prev,
+.modale-next {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modale-prev:hover,
+.modale-next:hover {
+  opacity: 50%;
+}
+
+.modale-prev {
+  position: absolute;
+  left: 20px;
+}
+
+.modale-next {
+  position: absolute;
+  right: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modale-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+}

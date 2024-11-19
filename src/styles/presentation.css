@@ -1,0 +1,122 @@
+.presentation {
+  background-image: url("https://i.postimg.cc/d3GBz2TS/pexels-george-dolgikh-551816-1303092.jpg");
+  background-size: cover; /* Assure que l'image couvre toute la section */
+  background-position: center; /* Centre l'image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.presentation--paraetimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.presentation--paragraphe {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+  max-width: 600px; 
+}
+
+.presentation--photo {
+  width: 550px;
+  margin: 20px;
+  border-radius: 200px 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    gap: 20px; /* Augmente l'espace entre les logos */
+}
+
+.logo {
+  width: 80px; /* Taille plus harmonieuse */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre */
+}
+
+.presentation--competences-titre {
+  font-size: 1.6rem;
+  margin: 50px 0 20px;
+  text-transform: uppercase;}
+
+  /* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.presentation {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .presentation--titre {
+    font-size: 2rem;
+  }
+
+  .presentation--paragraphe {
+    font-size: 1rem;
+  }
+
+  .presentation--photo {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    padding: 40px 15px;
+  }
+
+  .presentation--titre {
+    font-size: 1.8rem;
+  }
+
+  .presentation--paragraphe {
+    font-size: 0.9rem;
+  }
+
+  .presentation--photo {
+    width: 200px;
+  }
+
+  .logos {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation--titre {
+    font-size: 1.5rem;
+  }
+
+  .presentation--paragraphe {
+    font-size: 0.85rem;
+  }
+
+  .presentation--photo {
+    width: 150px;
+  }
+}

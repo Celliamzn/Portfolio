@@ -1,0 +1,116 @@
+/* Conteneur de la navbar */
+.navbar {
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  z-index: 9999;
+  font-family: 'Josefin Slab', serif;
+}
+
+/* Style global du header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 20px;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+header.active1 {
+  background-color: rgba(161, 161, 161, 0.6);
+  height: 3rem;
+}
+
+/* Logo */
+header .logo {
+  color: rgb(148, 179, 147);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+}
+
+header .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: rgb(148, 179, 147);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+  font-weight: 600;
+  border-bottom: solid 2px rgb(148, 179, 147);
+}
+
+.menu a.active {
+  font-weight: 600;
+  border-bottom: solid 2px rgb(148, 179, 147);
+}
+
+/* Icône pour mobile */
+header .show-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Responsive pour tablettes */
+  header {
+    height: 3.5rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  header .show-bar {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  header.active .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu a {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Responsive pour téléphones */
+  header {
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+}

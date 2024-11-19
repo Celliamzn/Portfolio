@@ -1,0 +1,16 @@
+.accueil {
+  background-image: url(https://i.postimg.cc/ZKmfhx3m/pexels-sohi-807598.jpg);
+
+}
+
+
+h1 {
+  font-size: 120px;
+  color: white;
+  text-align: center;
+  height: fit-content;
+  margin: auto;
+  font-family: 'Josefin Slab';
+  text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black,
+    -2px 0 0 black, -2px -2px black, 0 -2px 0 black, 2px -2px 0 black;
+}
