@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 9999;
   font-family: 'Josefin Slab', serif;
+
 }
 
 /* Style global du header */
@@ -29,7 +30,7 @@ header.active1 {
 }
 
 /* Logo */
-header .logo {
+header .logoCM {
   color: rgb(148, 179, 147);
   font-size: 2rem;
   font-weight: 600;
@@ -45,7 +46,7 @@ header .menu {
 .menu a {
   color: rgb(148, 179, 147);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-decoration: none;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
@@ -72,31 +73,24 @@ header .show-bar {
   }
 
   .menu {
-    display: none;
+    display: none; /* Cache le menu principal par défaut */
   }
 
   header .show-bar {
-    display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  header.active .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 3.5rem;
-    right: 0;
-    background: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Affiche le bouton burger */
   }
 
   .menu a {
     margin: 10px 0;
     font-size: 1rem;
+  }
+
+  .menu a.active {
+    border-bottom: none;
+  }
+
+  .menu a:hover {
+    border-bottom: none;
   }
 }
 
@@ -106,11 +100,64 @@ header .show-bar {
     padding: 0 10px;
   }
 
-  .logo {
+  .logoCM {
     font-size: 1.5rem;
   }
 
   .menu a {
     font-size: 0.9rem;
+  }
+  /* Icône burger pour mobile */
+header .show-bar {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(148, 179, 147);
+  z-index: 1000; /* S'assurer que le bouton est au-dessus */
+}
+
+/* Masque le menu principal par défaut sur mobile */
+header .menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Lorsque le menu burger est actif */
+header .menu.open {
+  display: flex;
+}
+}
+
+
+
+
+/* Styles responsive */
+@media (max-width: 768px) {
+  header {
+    height: 3.5rem;
+  }
+
+  .menu {
+    display: none; /* Cache le menu principal par défaut */
+  }
+
+  header .show-bar {
+    display: block; /* Affiche le bouton burger */
+  }
+
+  .menu a {
+    margin: 10px 0;
+    font-size: 1rem;
   }
 }

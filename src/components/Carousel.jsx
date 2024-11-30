@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import next from '../assets/logos/next.png'
-import back from '../assets/logos/back.png'
 import '../styles/carousel.css'
 import Modale from './Modale'
+import { SlArrowLeft, SlArrowRight   } from "react-icons/sl";
+import { FaGithub } from 'react-icons/fa';
 
 const Carousel = ({ projets }) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
@@ -50,10 +50,10 @@ const Carousel = ({ projets }) => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <div>
+    <div className='car-activ'>
       <div className="carousel">
-        <button className="left" onClick={handlePrevious}>
-          <img src={back} alt="back" className="arrow"></img>
+        <button className="arrow left" onClick={handlePrevious}>
+        <SlArrowLeft />
         </button>
         <div className="carousel-cards">
           {projets.map((projet, index) => (
@@ -74,21 +74,14 @@ const Carousel = ({ projets }) => {
             </div>
           ))}
         </div>
-        <button className="right" onClick={handleNext}>
-          <img src={next} alt="next" className="arrow"></img>
+        <button className=" arrow right" onClick={handleNext}>
+        <SlArrowRight />
         </button>
       </div>
       <div className="current-project">
         <div className="présentation-active">
-          <h2>{currentProject.title}</h2>
-          <div className="tags-active">
-            {currentProject.tags.map((tag, i) => (
-              <span key={i} className="tag-active">
-                {tag}
-              </span>
-            ))}{' '}
-          </div>
           <p className="présentation">{currentProject.description}</p>
+          <a className='github' href={currentProject.lien}><FaGithub /></a>
           <button
             className="openModalBtn"
             onClick={() => {

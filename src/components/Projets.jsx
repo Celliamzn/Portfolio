@@ -6,6 +6,7 @@ function Projets() {
   return (
     <div className="section projets" id='gallery'>
       <h2>Mes projets</h2>
+      <p className='viaOC'>(Via Openclassrooms)</p>
       <div className='card-wrap'>
        <Carousel projets={listProjets} key={listProjets.id} />
       </div>

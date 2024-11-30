@@ -18,15 +18,17 @@
 }
 
 .presentation--paragraphe {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.8;
-  text-align: justify;
+  text-align: end;
   margin: 0;
   max-width: 600px; 
+  font-weight: 500;
+  padding-left: 50px;
 }
 
 .presentation--photo {
-  width: 550px;
+  width: 300px;
   margin: 20px;
   border-radius: 200px 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -86,9 +88,6 @@
 }
 
 @media (max-width: 768px) {
-  .presentation {
-    padding: 40px 15px;
-  }
 
   .presentation--titre {
     font-size: 1.8rem;
@@ -114,9 +113,16 @@
 
   .presentation--paragraphe {
     font-size: 0.85rem;
+    text-align: justify;
+    padding: 0 30px;
   }
 
   .presentation--photo {
     width: 150px;
+  }
+
+  .presentation--paraetimg {
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 }

@@ -5,6 +5,7 @@ import Projets from './Projets'
 import Contact from './Contact'
 import '../styles/App.css'
 import "@fontsource/josefin-slab"
+import "@fontsource/josefin-slab/500.css";
 
 
 

@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-    padding-top: 35px;
+  padding-top: 35px;
+  height: 100%;
+}
 
+.viaOC {
+  margin: 7px;
 }

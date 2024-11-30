@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import next from '../assets/logos/next.png'
-import back from '../assets/logos/back.png'
 import '../styles/modale.css'
+import {  SlArrowLeft, SlArrowRight   } from "react-icons/sl";
+
 
 function Modale({ closeModale, pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -38,10 +38,11 @@ function Modale({ closeModale, pictures }) {
         {pictures.length > 1 && (
           <div className="modale-navigation">
             <button className="modale-prev" onClick={handlePrevious}>
-              <img src={back} alt="back" className="arrow"></img>
+            <SlArrowLeft />
             </button>
             <button className="modale-next" onClick={handleNext}>
-              <img src={next} alt="next" className="arrow"></img>
+            <SlArrowRight />
+
             </button>
           </div>
         )}

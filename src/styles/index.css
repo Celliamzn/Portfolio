@@ -31,7 +31,14 @@ h2 {
   font-size: 50px;
   color: rgba(17,56,12,1);
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin: 5px 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  
 }
+
+@media (max-width: 768px) {
+ h2 {
+  font-size: 28.8px;
+ }
+ }

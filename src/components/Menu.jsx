@@ -1,19 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/menu.css";
 
 function Menu() {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuRef = useRef(null);
 
   const handleMenuClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(targetId); // Met à jour la section active
+      setActiveSection(targetId);
+      setIsMenuOpen(false); // Ferme le menu burger
     }
   };
 
-  // Optionnel : Détecte la section visible pour définir la classe active automatiquement
+  // Ferme le menu burger lorsqu'on clique à l'extérieur
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  // Détecte la section visible pour définir la classe active automatiquement
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
     const handleScroll = () => {
@@ -30,17 +46,28 @@ function Menu() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <div className="navbar">
+    <div className="navbar" ref={menuRef}>
       <header id="header">
         <a
           href="#home"
-          className={`logo ${activeSection === "home" ? "active" : ""}`}
+          className={`logoCM ${activeSection === "home" ? "active" : ""}`}
           onClick={(e) => handleMenuClick(e, "home")}
         >
           Cellia Mouzon
         </a>
-        <div className="menu">
+        <button
+          className="show-bar"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          ≡
+        </button>
+        <nav className={`menu ${isMenuOpen ? "open" : ""}`}>
           <a
             href="#home"
             className={activeSection === "home" ? "active" : ""}
@@ -69,7 +96,7 @@ function Menu() {
           >
             Contactez-moi
           </a>
-        </div>
+        </nav>
       </header>
     </div>
   );
