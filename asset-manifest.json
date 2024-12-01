@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.3e8e69b7.css",
+    "main.js": "/Portfolio/static/js/main.baec916f.js",
+    "static/media/cv.pdf": "/Portfolio/static/media/cv.fc564fc0da9c298e1eb7.pdf",
+    "static/media/Cellia.webp": "/Portfolio/static/media/Cellia.1397faf393a5ec269511.webp",
+    "static/media/josefin-slab-latin-400-normal.woff": "/Portfolio/static/media/josefin-slab-latin-400-normal.a13a68109079fecdf96c.woff",
+    "static/media/josefin-slab-latin-500-normal.woff": "/Portfolio/static/media/josefin-slab-latin-500-normal.3c42d5f5e33894dfd184.woff",
+    "static/media/josefin-slab-latin-400-normal.woff2": "/Portfolio/static/media/josefin-slab-latin-400-normal.c4ecf26716adddd4f8af.woff2",
+    "static/media/josefin-slab-latin-500-normal.woff2": "/Portfolio/static/media/josefin-slab-latin-500-normal.6181b6a35b9fb45d28ba.woff2",
+    "static/media/react-2.svg": "/Portfolio/static/media/react-2.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/nodejs-icon.svg": "/Portfolio/static/media/nodejs-icon.615ffbea9529ca7047ed8a912bfd94b2.svg",
+    "static/media/github-icon-1.svg": "/Portfolio/static/media/github-icon-1.e0d7d7254ac0545743fc7af09c1e977b.svg",
+    "static/media/mongodb-icon-1.svg": "/Portfolio/static/media/mongodb-icon-1.1aca075d5cce0819fea7ea0902d94ce4.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/css-3.svg": "/Portfolio/static/media/css-3.4e47c3122b8d2476a02f97dcfcb28640.svg",
+    "static/media/html-1.svg": "/Portfolio/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
+    "static/media/javascript-1.svg": "/Portfolio/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
+    "main.3e8e69b7.css.map": "/Portfolio/static/css/main.3e8e69b7.css.map",
+    "main.baec916f.js.map": "/Portfolio/static/js/main.baec916f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e8e69b7.css",
+    "static/js/main.baec916f.js"
+  ]
+}
