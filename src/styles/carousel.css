@@ -43,7 +43,7 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .tag {
   border-radius: 20px;

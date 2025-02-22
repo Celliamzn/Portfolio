@@ -9,8 +9,7 @@ function Présentation() {
       <h2 className="presentation--titre">À propos</h2>
       <div className="presentation--paraetimg">
         <p className="presentation--paragraphe">
-          Future développeuse web (formation d'Openclassrooms) et passionnée d’UX Design, je suis toujours
-          dans la recherche d’apprendre et d’améliorer mes compétences.
+        Jeune diplômée en développement informatique en quête d’une alternance en webdesign, je souhaite mettre mon sens créatif au service de projets innovants.
         </p>
         <img src={Cellia} alt="Moi-même" className="presentation--photo" />
       </div>

@@ -1,7 +1,7 @@
 
 import '../styles/contact.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import CV from "../assets/data/cv.pdf"
+import CV from "../assets/data/CV_Mouzon_Cellia.pdf"
 
 function Contact() {
   const socials = [

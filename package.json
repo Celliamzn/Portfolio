@@ -2,6 +2,7 @@
   "name": "portfolio-cellia",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://celliamzn.github.io/Portfolio/",
   "dependencies": {
     "@fontsource/josefin-slab": "^5.1.0",
     "@testing-library/jest-dom": "^5.17.0",
