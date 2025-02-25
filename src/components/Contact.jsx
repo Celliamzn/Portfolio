@@ -2,6 +2,7 @@
 import '../styles/contact.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import CV from "../assets/data/CV_Mouzon_Cellia.pdf"
+import background from "../assets/images/pexels-martinpechy-1028223.jpg"
 
 function Contact() {
   const socials = [
@@ -11,7 +12,7 @@ function Contact() {
   ];
 
   return (
-    <div className="contact-page section contact" id='contact'>
+    <div className="contact-page section contact" style={{backgroundImage : `url(${background}`}} id='contact'>
         <div className='contact-background'>
       <h2 className="contact-title">Restons connectés</h2>
       <p className="contact-description">
