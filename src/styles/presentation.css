@@ -1,5 +1,4 @@
 .presentation {
-  background-image: url("https://i.postimg.cc/d3GBz2TS/pexels-george-dolgikh-551816-1303092.jpg");
   background-size: cover; /* Assure que l'image couvre toute la section */
   background-position: center; /* Centre l'image */
   display: flex;
